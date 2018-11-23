@@ -1,4 +1,4 @@
-#!/bin/sh
+#!/bin/bash
 
 export R_HOME="/Library/Frameworks/R.framework/Resources"
 XLISPLIB=/Users/jharner/Documents/Dev/xlispstatR export XLISPLIB
