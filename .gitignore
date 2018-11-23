@@ -6,3 +6,9 @@
 *.html
 *nb.html
 *.log
+*.toc
+*.gz
+*.snm
+*.nav
+*.xcf
+*.odg
