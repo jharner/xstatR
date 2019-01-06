@@ -52,6 +52,8 @@ FOREIGN_FILE = @FOREIGN_FILE@
 CC = @CC@
 LDCC = $(CC)
 
+export R_HOME = @R_HOME@
+
 SHELL = /bin/sh
 
 ###############################################################################

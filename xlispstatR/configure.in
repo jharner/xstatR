@@ -17,7 +17,7 @@ UCFLAGS=-O
 ULDFLAGS=
 X11INCDIR_FLAG=
 X11LIBDIR_FLAG=
-EXTRALIBS=
+EXTRALIBS=-lR
 EXTRAOBJS=
 FOREIGN_FILE=dummy-foreign.h
 
@@ -301,6 +301,10 @@ if test `$CC -v 2>&1 | grep -c gcc` != "0" ; then
   esac
 fi
 
+# Set R related stuff
+R_HOME=`Rscript -e "cat(R.home())"`
+R_CPPFLAGS=`Rscript -e "cat('-I', R.home('include'), sep='')"`
+UCFLAGS="$UCFLAGS $R_CPPFLAGS"
 
 #
 # Register variables for substitution
@@ -318,6 +322,7 @@ AC_SUBST(CC)
 AC_SUBST(SHLIB_CFLAGS)
 AC_SUBST(SHLIB_LD)
 AC_SUBST(SHLIB_LD_LIBS)
+AC_SUBST(R_HOME)
 
 echo GRAPHSYS       = $GRAPHSYS
 echo X11INCDIR_FLAG = $X11INCDIR_FLAG
@@ -331,6 +336,7 @@ echo CC             = $CC
 echo SHLIB_CFLAGS   = $SHLIB_CFLAGS
 echo SHLIB_LD       = $SHLIB_LD
 echo SHLIB_LD_LIBS  = $SHLIB_LD_LIBS
+echo R_HOME         = $R_HOME
 
 AC_LINK_FILES($link_sources,$link_targets)
 AC_OUTPUT(Makefile shlibconfig.sh)
