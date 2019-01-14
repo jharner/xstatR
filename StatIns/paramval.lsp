@@ -1,0 +1,1 @@
+(defproto cntl-proto '(wind) () graph-overlay-proto)

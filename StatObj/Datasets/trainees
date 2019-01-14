@@ -1,0 +1,6 @@
+(def sales (make-variable '(105 120 160 155 70 150 185 130) :name 'sales
+                          :role 'Y))
+
+(def scores (make-variable '(45 75 85 65 50 70 80 55) :name 'scores :role 'X))
+
+(def trainees (make-dataset (list sales scores) :dataset-name 'trainees))
