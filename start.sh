@@ -12,7 +12,7 @@ case $key in
 	-r|--run|run)
 	echo "start xstatR"
         xhost + 127.0.0.1
-        docker run -it --rm --env="DISPLAY=host.docker.internal$DISPLAY" xstat-r
+        docker run -it --rm --env="DISPLAY=host.docker.internal:0" xstat-r
 	;;
         *)
         echo "unknown option"
