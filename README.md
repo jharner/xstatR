@@ -6,9 +6,17 @@ Assuming you are in your xstatR local repo, execute:
 
 ./start.sh build  
 
-to build the image. After the initial build, you only needs to run:  
+to build the image.
+
+Prior to running xstatR, start an X11 terminal session and execute:
+
+xhost +
+
+
+Once clients are able to connect, execute:
 
 ./start.sh run  
+
 to run the image.
 
 

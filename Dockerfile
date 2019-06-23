@@ -13,6 +13,7 @@ COPY ./Dataset /xstatR/Dataset
 COPY ./Datasets /xstatR/Datasets
 COPY ./Model /xstatR/Model
 COPY ./Plot /xstatR/Plot
+COPY ./StatObj /xstatR/StatObj
 WORKDIR /xstatR/xlispstatR
 RUN ./configure --prefix=/xstatR/build && make && make install
 
