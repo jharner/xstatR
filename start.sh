@@ -14,7 +14,7 @@ case $key in
         xhost + 127.0.0.1
         docker run -it --rm --env="DISPLAY=host.docker.internal:0" xstat-r
 	;;
-        *)
+    *)
         echo "unknown option"
         exit 1
         ;;
